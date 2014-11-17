@@ -1,8 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
   <title>Avatar</title>
+  <script src="https://a305e4ecb4948f8f6aca55a71ec0b4e71cf75a2c.googledrive.com/host/0B9V_DSzkZ8zAQUZuMWx2bkpSZVU/p5.min.js"></script>
+  <script>
+   var eyeSize=10;
+   var direction=1;
+   var x=100,y=100;
+function setup() {
+  createCanvas(300, 200);
+  var node=document.getElementsByTagName('canvas')[0];
+  document.getElementById('drawing').appendChild(node);
+}
+function draw() {
+//  background(255);
+//  x=mouseX;
+//  y=mouseY;
+  eyeSize = eyeSize+direction;
+  if ((eyeSize == 30) || (eyeSize== 10)){ 
+    direction=-direction; } 
+noStroke();
+// face 
+fill(255, 255, 0); 
+ellipse(x, y, 100, 100);
+// mouth 
+fill(252, 65, 65); 
+ellipse(x+15, y+15, 20, 50); 
+// eyes 
+fill(46, 46, 41); 
+ellipse(x-5, y-3, eyeSize, eyeSize); 
+ellipse(x+30, y-3, eyeSize, eyeSize);
+}
+  </script>
+
 
   <style>
 @media screen and (max-width:360px){
@@ -18,7 +49,8 @@ body{max-width: 620px;
 margin: 0 auto;
 background-color: black;}
 
-img {max-width: 100%;}
+img {max-width: 100%;
+height: auto;}
 
 a:link {color:#FFFFFF;text-decoration:none;}
 
@@ -75,6 +107,8 @@ text-shadow: 1px 1px 1px 2px #000000;}
 </style>
 </head>
 <body>
+<div id="drawing"></div>
+
   <div class="a1">
   <img src="https://www.googledrive.com/host/0B85ZhkCXpbC4d1ZGVzA2aFVKalk" alt="Captain" id="img1"/>
 
