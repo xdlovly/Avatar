@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Avatar</title>
+  <script type="text/javascript">
+ function payPrint()
+{ window.print()}
+
+
+</script>
   <style>
 
 body{max-width: 620px;
@@ -49,12 +55,21 @@ padding: 10px 10px 10px 10px;}
 @media screen and (min-width: 641px){
             } 
 
+@media print {
+        body {background-color: #fff;
+      font-family: Times, serif;
+            font-size: 12pt;}
+        button {display:none;}
+        a {text-decoration: none;}
+        img{width: 100%;}
+    }
+
 </style>
 </head>
 <body>
-
 <div class="page2">
   <p id="p"><a href="index.html"><span>Avatar</span></a>Information</p>
+  <input type="button" value="PRINT" onclick="payPrint()"></input>
 <br>
 
   <ul>
@@ -139,5 +154,6 @@ padding: 10px 10px 10px 10px;}
 </ul>
 
   </div>
+
 </body>
 </html>
